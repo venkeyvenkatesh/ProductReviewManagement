@@ -15,6 +15,15 @@ namespace ProductReviewManagement
 
             return result.ToList();
         }
+
+        public List<Product_Review> GetRatedMoreThan3AndProductId1Or4Or9(List<Product_Review> product_Review)
+        {
+            var result = (from product in product_Review
+                          where product.rating > 3 && (product.productId == 1 || product.productId == 4 || product.productId == 9)
+                          select product).ToList();
+
+            return result;
+        }
     }
 }
 

@@ -30,10 +30,11 @@ namespace ProductReviewManagement
             //  displayList(list);
 
             Management management = new Management();
-            List<Product_Review> TopRatedList = management.GetTopThreeRatedProducts(list);
-              displayList(TopRatedList);
+            //List<Product_Review> TopRatedList = management.GetTopThreeRatedProducts(list);
+            //  displayList(TopRatedList);
 
-
+            List<Product_Review> RatingGreaterThanThree = management.GetRatedMoreThan3AndProductId1Or4Or9(list);
+             displayList(RatingGreaterThanThree);
 
         }
 
