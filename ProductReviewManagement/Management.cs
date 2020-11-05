@@ -24,6 +24,20 @@ namespace ProductReviewManagement
 
             return result;
         }
+
+
+        public void GetCountGroupProductId(List<Product_Review> productReview)
+        {
+
+
+            var result = productReview.GroupBy(x => x.productId)
+                         .Select(x => new { productId = x.Key, count = x.Count() });
+            Console.WriteLine("productId" + "\t " + "NoOfReviews");
+            foreach (var x in result)
+            {
+                Console.WriteLine("   " + x.productId + "\t\t    " + x.count);
+            }
+        }
     }
 }
 
