@@ -8,8 +8,6 @@ namespace ProductReviewManagement
     public class Management
     {
 
-  
-
         }
     }
 

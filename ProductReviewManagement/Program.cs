@@ -29,12 +29,11 @@ namespace ProductReviewManagement
 
              displayList(list);
 
+
         }
 
         public static void displayList(List<Product_Review> list)
         {
-
-           
             foreach (var r in list)
             {
                 Console.WriteLine(r.productId + " " + r.userId + " " + r.rating + " " + r.review + " " + r.isLike);
