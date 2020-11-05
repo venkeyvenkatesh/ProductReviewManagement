@@ -27,7 +27,12 @@ namespace ProductReviewManagement
             list.Add(new Product_Review(11, 106, 4, "Good", true));
             list.Add(new Product_Review(10, 101, 1, "Bad", false));
 
-             displayList(list);
+            //  displayList(list);
+
+            Management management = new Management();
+            List<Product_Review> TopRatedList = management.GetTopThreeRatedProducts(list);
+              displayList(TopRatedList);
+
 
 
         }
