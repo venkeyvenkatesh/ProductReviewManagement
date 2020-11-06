@@ -36,8 +36,14 @@ namespace ProductReviewManagement
             //List<Product_Review> RatingGreaterThanThree = management.GetRatedMoreThan3AndProductId1Or4Or9(list);
             // displayList(RatingGreaterThanThree);
 
-            management.GetCountGroupProductId(list);
+            //  management.GetCountGroupProductId(list);
+            //  List<Product_Review> skippedRecords=management.skipTopFiveRecords(list);
+            //  displayList(skippedRecords);
 
+
+            management.productIdAndReview(list);
+
+            
 
         }
 
