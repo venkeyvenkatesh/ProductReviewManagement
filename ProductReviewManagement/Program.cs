@@ -37,14 +37,17 @@ namespace ProductReviewManagement
             // displayList(RatingGreaterThanThree);
 
             //  management.GetCountGroupProductId(list);
-          
 
 
-           // management.productIdAndReview(list);
+
+            // management.productIdAndReview(list);
 
 
-            List<Product_Review> skippedRecords=management.skipTopFiveRecords(list);
-             displayList(skippedRecords);
+            //  List<Product_Review> skippedRecords=management.skipTopFiveRecords(list);
+            //  displayList(skippedRecords);
+
+            DataTableManagement dataTable = new DataTableManagement();
+            dataTable.displayDataTable();
         }
 
         public static void displayList(List<Product_Review> list)
