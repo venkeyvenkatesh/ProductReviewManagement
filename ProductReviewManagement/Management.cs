@@ -59,10 +59,17 @@ namespace ProductReviewManagement
 
         }
 
-      
+
+        //UC6 skip the top five records 
+        public List<Product_Review> skipTopFiveRecords(List<Product_Review> product_Review)
+        {
+            var result = (from product in product_Review
+                          select product).Skip(5);
+            return result.ToList();
+        }
 
 
-       
+
     }
 }
 
