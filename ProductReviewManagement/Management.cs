@@ -69,9 +69,23 @@ namespace ProductReviewManagement
         }
 
 
+        //UC10 Retrive avg rating group by product id
 
-      
-       
+        public void AvgRatingGroupByProductId(List<Product_Review> product_Review)
+        {
+            var result = product_Review.GroupBy(p => p.productId).
+                Select(p => new { productId = p.Key, Avg =p.Average(p=>p.rating)});
+
+          
+
+            foreach (var x in result)
+            {
+                Console.WriteLine("   " + x.productId + "\t\t    " + x.Avg);
+            }
+
+        }
+
+
 
         //UC11 GetThe Good review products
         public List<Product_Review> ReviewMessageNice(List<Product_Review> product_Review)

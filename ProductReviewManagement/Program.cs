@@ -55,8 +55,9 @@ namespace ProductReviewManagement
             //  List<Product_Review> RiviewMessageGood = management.ReviewMessageNice(list);
             //   displayList(RiviewMessageGood);
 
-            List<Product_Review> UserRecords = management.GetTheRecordsOfUserOrderByRating(list);
-            displayList(UserRecords);
+            //    List<Product_Review> UserRecords = management.GetTheRecordsOfUserOrderByRating(list);
+            //   displayList(UserRecords);
+            management.AvgRatingGroupByProductId(list);
 
         }
 
