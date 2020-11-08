@@ -83,9 +83,19 @@ namespace ProductReviewManagement
         }
 
 
+        //UC12 geth the particuale user id records order by rating
+
+        public List<Product_Review> GetTheRecordsOfUserOrderByRating(List<Product_Review> product_Review)
+        {
+            var result = from product in product_Review
+                         where product.userId == 101
+                         orderby product.rating descending
+                         select product;
+            return result.ToList();
+
+        }
 
 
-     
     }
 }
 

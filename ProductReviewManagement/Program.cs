@@ -52,14 +52,16 @@ namespace ProductReviewManagement
 
             // management.AvgRatingGroupByProductId(list);
 
-             List<Product_Review> RiviewMessageGood = management.ReviewMessageNice(list);
-              displayList(RiviewMessageGood);
+            //  List<Product_Review> RiviewMessageGood = management.ReviewMessageNice(list);
+            //   displayList(RiviewMessageGood);
 
-           
+            List<Product_Review> UserRecords = management.GetTheRecordsOfUserOrderByRating(list);
+            displayList(UserRecords);
+
         }
 
 
-       
+
         public static void displayList(List<Product_Review> list)
         {
             foreach (var r in list)
