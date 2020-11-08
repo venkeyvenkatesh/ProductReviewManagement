@@ -21,7 +21,7 @@ namespace ProductReviewManagement
             list.Add(new Product_Review(8, 102, 3, "Avg", false));
             list.Add(new Product_Review(9, 108, 3, "Nice", false));
             list.Add(new Product_Review(10, 104, 5, "Good", true));
-            list.Add(new Product_Review(11, 110, 4, "Good", true));
+            list.Add(new Product_Review(11, 101, 4, "Good", true));
             list.Add(new Product_Review(12, 106, 3, "Good", true));
             list.Add(new Product_Review(3, 101, 1, "Bad", false));
             list.Add(new Product_Review(11, 106, 4, "Good", true));
@@ -46,10 +46,20 @@ namespace ProductReviewManagement
             //  List<Product_Review> skippedRecords=management.skipTopFiveRecords(list);
             //  displayList(skippedRecords);
 
-            DataTableManagement dataTable = new DataTableManagement();
-            dataTable.displayDataTable();
+            // DataTableManagement dataTable = new DataTableManagement();
+            // dataTable.displayDataTable();
+            //  dataTable.displayIsAlikeTrue();
+
+            // management.AvgRatingGroupByProductId(list);
+
+             List<Product_Review> RiviewMessageGood = management.ReviewMessageNice(list);
+              displayList(RiviewMessageGood);
+
+           
         }
 
+
+       
         public static void displayList(List<Product_Review> list)
         {
             foreach (var r in list)
@@ -58,5 +68,7 @@ namespace ProductReviewManagement
             }
         }
 
+
+        
     }
 }

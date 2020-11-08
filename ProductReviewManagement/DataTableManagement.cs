@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace ProductReviewManagement
 {
@@ -34,6 +35,8 @@ namespace ProductReviewManagement
             table.Rows.Add(10, 101, 1, "Bad", false);
 
         }
+
+        //UC8 Adding data to dataTable and displaying
         public void displayDataTable()
         {
             addDataTable();
@@ -50,6 +53,9 @@ namespace ProductReviewManagement
                 Console.WriteLine(element.productId + " " + " " + element.userId + " " + element.rating + "  " + element.review + " " + element.isALike);
             }
         }
+
+     
+        
 
      
     }

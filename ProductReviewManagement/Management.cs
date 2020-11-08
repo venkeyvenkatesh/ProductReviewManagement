@@ -47,7 +47,7 @@ namespace ProductReviewManagement
         }
 
 
-        //UC5 Retrieve only product id and review
+        //UC5 & UC7 Retrieve only product id and review
         public void productIdAndReview(List<Product_Review> product_Review)
         {
             var result = product_Review.Select(x => new { productId = x.productId, review = x.review });
@@ -59,9 +59,9 @@ namespace ProductReviewManagement
 
         }
 
-
+      
         //UC6 skip the top five records 
-        public List<Product_Review> skipTopFiveRecords(List<Product_Review> product_Review)
+        public List<Product_Review>  skipTopFiveRecords(List<Product_Review> product_Review)
         {
             var result = (from product in product_Review
                           select product).Skip(5);
@@ -70,6 +70,22 @@ namespace ProductReviewManagement
 
 
 
+      
+       
+
+        //UC11 GetThe Good review products
+        public List<Product_Review> ReviewMessageNice(List<Product_Review> product_Review)
+        {
+            var result = from product in product_Review
+                         where product.review == "Good"
+                         select product;
+            return result.ToList();
+        }
+
+
+
+
+     
     }
 }
 
