@@ -56,21 +56,7 @@ namespace ProductReviewManagement
         }
 
 
-        ////UC9 Getting isLaike=true from datatable
-        //public void displayIsAlikeTrue()
-        //{
-        //    addDataTable();
-
-            
-        //    var result = (from rows in  table.AsEnumerable()
-        //                 Where rows.Field<string>("isAlike")=="true"
-        //                   Select rows.Field<int>("productId"));
-          
-        //    foreach (var element in result)
-        //    {
-        //        Console.WriteLine(element.productId + " " + " " + element.userId + " " + element.rating + "  " + element.review + " " + element.isALike);
-        //    }
-        //}
+       
 
 
 
