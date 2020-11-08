@@ -57,8 +57,10 @@ namespace ProductReviewManagement
 
             //    List<Product_Review> UserRecords = management.GetTheRecordsOfUserOrderByRating(list);
             //   displayList(UserRecords);
-            management.AvgRatingGroupByProductId(list);
+           // management.AvgRatingGroupByProductId(list);
+           List<Product_Review> likedProductList= management.LikedProducts(list);
 
+            displayList(likedProductList);
         }
 
 

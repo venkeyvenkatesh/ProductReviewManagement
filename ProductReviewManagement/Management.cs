@@ -68,6 +68,16 @@ namespace ProductReviewManagement
             return result.ToList();
         }
 
+        // UC9 whose is like value is true
+        public List<Product_Review> LikedProducts(List<Product_Review> productReview)
+        {
+            var records = from product in productReview
+                          where product.isLike == true
+                          select product;
+
+            return records.ToList();
+
+        }
 
         //UC10 Retrive avg rating group by product id
 
